@@ -4,17 +4,17 @@ app=express();
 
 
 app.get("/six",function(req,res){
-    res.append("name","hridoy")
-    res.append("city","dinajpur")
-    res.send("hello word");
-    res.status(201).end("hello word");
+   res.cookie("name","hridoy")
+   res.cookie("roll","50015")
+   res.cookie("city","dinajpur")
+   res.end("hello word")
     
 });
 
 
 
 
-app.listen( 2010, function() {
+app.listen( 2030, function() {
 
     console.log("server run success..")
 });

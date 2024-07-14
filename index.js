@@ -4,24 +4,25 @@ app=express();
 
 app.get("/",function(req,res){
 
-res.send("hello word")
+let myObjat =[
+{
+    name:"hridoy",
+    city:"dinajpur",
+    age:22,
+    maill:"korkor",
+},
+{
+    name:"riya",
+    city:"soidpur",
+    age:15,
+}
+]
+
+    res.json(myObjat);
+    
 });
-app.get("/about",function(req,res){
-    res.send("about page")
 
-});
-app.get("/concat",function(req,res){
-
-    res.send("concat page ")
-
-});
-app.get("/login",function(req,res){
-
-    res.send("login page ")
-});
-
-
-app.listen( 2050, function() {
+app.listen( 2030, function() {
 
     console.log("server run success..")
 });

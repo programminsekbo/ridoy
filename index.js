@@ -2,27 +2,19 @@ var express=require('express');
 
 app=express();
 
-app.get("/",function(req,res){
 
-let myObjat =[
-{
-    name:"hridoy",
-    city:"dinajpur",
-    age:22,
-    maill:"korkor",
-},
-{
-    name:"riya",
-    city:"soidpur",
-    age:15,
-}
-]
-
-    res.json(myObjat);
+app.get("/six",function(req,res){
+    res.append("name","hridoy")
+    res.append("city","dinajpur")
+    res.send("hello word");
+    res.status(201).end("hello word");
     
 });
 
-app.listen( 2030, function() {
+
+
+
+app.listen( 2010, function() {
 
     console.log("server run success..")
 });

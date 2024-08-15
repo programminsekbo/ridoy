@@ -1,6 +1,7 @@
 var express=require('express');
-
-app=express();
+var bodyParser=require('body-parser')
+var app=express();
+app.use(bodyParser.json());
 
 
 app.get("/six",function(req,res){
@@ -22,16 +23,16 @@ app.get("/six",function(req,res){
 
  app.post("/",function(req,res){
   
-   let fistName=req.header.fistName;
-   let lestName=req.header.lestName;
-    res.end( fistName+" "+lestName)
+   let userName=req.header("userName")
+   let password=req.header("password")
+    res.end("user Name:"+userName+" password:"+password)
      
  });
   
 
 
 
-app.listen( 3060, function() {
+app.listen( 1060, function() {
 
     console.log("server run success..")
 });
